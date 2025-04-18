@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title | David Gonzalez</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Project page specific styles */
+        body {
+            background-color: #000000;
+        }
+        
+        body::before {
+            display: none; /* Remove the gradient background */
+        }
+        
+        .project-content {
+            padding: 0 20px 40px;
+        }
+        
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .project-header h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .project-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #8B0000;
+            transition: width 0.5s ease, left 0.5s ease;
+        }
+        
+        .project-header:hover h2::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        .project-category {
+            color: #8B0000;
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .project-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #333;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);
+            border-color: #8B0000;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .project-info-box {
+            background-color: #111;
+            padding: 25px;
+            border-left: 3px solid #8B0000;
+            margin-bottom: 30px;
+        }
+        
+        .project-info-box h3 {
+            margin-top: 0;
+            color: #fff;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .tech-tag {
+            background-color: #222;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #444;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .tech-tag:hover {
+            background-color: #8B0000;
+            transform: translateY(-3px);
+        }
+        
+        .project-section {
+            margin-top: 60px;
+        }
+        
+        .project-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #fff;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .project-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: #8B0000;
+            transition: width 0.3s ease;
+        }
+        
+        .project-section:hover h3::after {
+            width: 120px;
+        }
+        
+        .results-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .results-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .results-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .results-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #8B0000;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .project-link-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8B0000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .project-link-btn:hover {
+            background-color: #a50000;
+            transform: translateY(-3px);
+        }
+        
+        .project-link-btn i {
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .project-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <div class="header-content">
+                <div class="name-title">
+                    <h1>DAVID<br>GONZALEZ</h1>
+                    <p class="subtitle">AI AND QUANTITATIVE DATA SCIENTIST</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="divider"></div>
+
+        <section class="project-content">
+            <div class="project-header">
+                <h2>PROJECT TITLE</h2>
+                <p class="project-category">Project Category</p>
+                <div class="mini-divider"></div>
+            </div>
+            
+            <!-- Main project image -->
+            <div class="project-image-main" style="background-image: url('Assets/sample.png'); background-size: cover; background-position: center; height: 400px; margin-bottom: 40px; border: 2px solid #333;"></div>
+            
+            <div class="project-details">
+                <div class="project-description">
+                    <div class="project-info-box">
+                        <h3>Project Overview</h3>
+                        <p>Provide a comprehensive overview of your project here. Explain the purpose, goals, and significance of the project. What problem does it solve? What makes it unique or innovative? This section should give readers a clear understanding of what the project is about.</p>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h3>Challenge</h3>
+                        <p>Describe the challenges or problems that this project addresses. What were the specific obstacles or requirements that needed to be overcome? This helps contextualize the importance of your work.</p>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h3>Approach</h3>
+                        <p>Explain your methodology and approach to solving the problem. What strategies, techniques, or frameworks did you employ? How did you design and implement your solution? This section should highlight your technical and creative process.</p>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h3>Results & Impact</h3>
+                        <ul class="results-list">
+                            <li>Key achievement or result #1</li>
+                            <li>Key achievement or result #2</li>
+                            <li>Key achievement or result #3</li>
+                            <li>Key achievement or result #4</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-sidebar">
+                    <div class="project-info-box">
+                        <h3>Project Details</h3>
+                        <p><strong>Client:</strong> Client Name (if applicable)</p>
+                        <p><strong>Timeline:</strong> Month Year - Month Year</p>
+                        <p><strong>Role:</strong> Your role in the project</p>
+                        <p><strong>Team Size:</strong> Number of team members (if applicable)</p>
+                    </div>
+                    
+                    <div class="project-info-box">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="#" class="project-link-btn"><i class="fab fa-github"></i> View Code</a>
+                        <a href="#" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-section">
+                <h3>Gallery</h3>
+                <div class="project-gallery">
+                    <div class="gallery-item">
+                        <img src="Assets/sample.png" alt="Project image 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Assets/sample.png" alt="Project image 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Assets/sample.png" alt="Project image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Assets/sample.png" alt="Project image 4">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-section">
+                <h3>Key Features</h3>
+                <div class="project-info-box">
+                    <p>Highlight the main features and functionalities of your project. What makes it stand out? What are the technical or design aspects that you're particularly proud of? This section should showcase the strengths of your work.</p>
+                </div>
+            </div>
+            
+            <div class="project-section">
+                <h3>Lessons Learned</h3>
+                <div class="project-info-box">
+                    <p>Share insights gained from working on this project. What challenges did you overcome? What would you do differently next time? This reflection demonstrates your growth and learning process.</p>
+                </div>
+            </div>
+            
+            <div class="project-section">
+                <h3>Future Improvements</h3>
+                <div class="project-info-box">
+                    <p>Discuss potential enhancements or next steps for the project. What features or improvements would you like to implement in the future? This shows your forward-thinking approach and commitment to continuous improvement.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section contact-info">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> david.gonzalez@example.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hamburg, Germany</p>
+                </div>
+                
+                <div class="footer-section social-links">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="work.html">WORK</a></li>
+                        <li><a href="lab.html">LAB</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 David Gonzalez. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

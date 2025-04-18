@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandBox | David Gonzalez</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Lab page specific styles */
+        body {
+            background: #000000 !important; /* Ensure static black background */
+            animation: none !important; /* Remove gradient animation */
+        }
+        
+        body::before {
+            display: none; /* Remove the gradient background */
+        }
+        
+        .lab-content {
+            padding: 0 20px 40px;
+        }
+        
+        .lab-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .lab-header h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .lab-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #8B0000;
+            transition: width 0.5s ease, left 0.5s ease;
+        }
+        
+        .lab-header:hover h2::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <div class="header-content">
+                <div class="name-title">
+                    <h1>DAVID<br>GONZALEZ</h1>
+                    <p class="subtitle">AI AND QUANTITATIVE DATA SCIENTIST</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="divider"></div>
+
+        <section class="lab-content">
+            <div class="lab-header">
+                <h2>THE SANDBOX</h2>
+                <div class="mini-divider"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Experiment 1 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Assets/sample.png'); background-size: cover; background-position: center;">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project">View Experiment</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Neural Style Transfer</h4>
+                        <p class="project-category">Computer Vision</p>
+                        <p>Experimental application of neural style transfer algorithms to create artistic imagery.</p>
+                    </div>
+                </div>
+                
+                <!-- Experiment 2 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Assets/sample.png'); background-size: cover; background-position: center;">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project">View Experiment</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Generative AI Text Explorer</h4>
+                        <p class="project-category">Natural Language Processing</p>
+                        <p>Experimental interface for exploring and fine-tuning large language model outputs.</p>
+                    </div>
+                </div>
+                
+                <!-- Experiment 3 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Assets/sample.png'); background-size: cover; background-position: center;">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project">View Experiment</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Reinforcement Learning Sandbox</h4>
+                        <p class="project-category">Machine Learning</p>
+                        <p>Interactive environment for testing and visualizing reinforcement learning algorithms.</p>
+                    </div>
+                </div>
+                
+                <!-- Experiment 4 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Assets/sample.png'); background-size: cover; background-position: center;">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project">View Experiment</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Quantum Computing Simulator</h4>
+                        <p class="project-category">Quantum Computing</p>
+                        <p>Educational tool for simulating basic quantum algorithms and visualizing quantum states.</p>
+                    </div>
+                </div>
+                
+                <!-- Experiment 5 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Assets/sample.png'); background-size: cover; background-position: center;">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project">View Experiment</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Blockchain Data Visualizer</h4>
+                        <p class="project-category">Blockchain Technology</p>
+                        <p>Experimental tool for visualizing and analyzing blockchain transaction networks.</p>
+                    </div>
+                </div>
+                
+                <!-- Experiment 6 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Assets/sample.png'); background-size: cover; background-position: center;">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project">View Experiment</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Augmented Reality Data Overlay</h4>
+                        <p class="project-category">Augmented Reality</p>
+                        <p>Prototype for displaying real-time data analytics through AR interfaces.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates | David Gonzalez</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Certificates page specific styles */
+        body {
+            background: #000000 !important; /* Ensure static black background */
+            animation: none !important; /* Remove gradient animation */
+        }
+        
+        .certificates-content {
+            padding: 0 20px 40px;
+        }
+        
+        .certificates-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .certificates-header h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .certificates-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #8B0000;
+            transition: width 0.5s ease, left 0.5s ease;
+        }
+        
+        .certificates-header:hover h2::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .certificates-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <div class="header-content">
+                <div class="name-title">
+                    <h1>DAVID<br>GONZALEZ</h1>
+                    <p class="subtitle">AI AND QUANTITATIVE DATA SCIENTIST</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="divider"></div>
+
+        <section class="certificates-content">
+            <div class="certificates-header">
+                <h2>MY CERTIFICATES</h2>
+                <div class="mini-divider"></div>
+            </div>
+            
+            <div class="certificates-grid">
+                <!-- Certificate 1 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Assets/sample.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-info">
+                        <h4>Machine Learning Specialization</h4>
+                        <p class="project-category">Stanford University</p>
+                        <p>Advanced certification in machine learning algorithms, neural networks, and practical applications.</p>
+                    </div>
+                </div>
+                
+                <!-- Certificate 2 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Assets/sample.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-info">
+                        <h4>Deep Learning Professional</h4>
+                        <p class="project-category">DeepLearning.AI</p>
+                        <p>Comprehensive certification in neural networks, computer vision, and natural language processing.</p>
+                    </div>
+                </div>
+                
+                <!-- Certificate 3 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Assets/sample.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-info">
+                        <h4>Data Science Professional</h4>
+                        <p class="project-category">Harvard University</p>
+                        <p>Certification in statistical methods, data visualization, and predictive modeling techniques.</p>
+                    </div>
+                </div>
+                
+                <!-- Certificate 4 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Assets/sample.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-info">
+                        <h4>TensorFlow Developer</h4>
+                        <p class="project-category">Google</p>
+                        <p>Professional certification in building and deploying machine learning models with TensorFlow.</p>
+                    </div>
+                </div>
+                
+                <!-- Certificate 5 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Assets/sample.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-info">
+                        <h4>Big Data Analytics</h4>
+                        <p class="project-category">IBM</p>
+                        <p>Certification in big data technologies, distributed computing, and analytics frameworks.</p>
+                    </div>
+                </div>
+                
+                <!-- Certificate 6 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Assets/sample.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-info">
+                        <h4>AI Ethics and Governance</h4>
+                        <p class="project-category">MIT</p>
+                        <p>Specialized certification in ethical considerations, governance frameworks, and responsible AI development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="footer.js"></script>
+</body>
+</html>
