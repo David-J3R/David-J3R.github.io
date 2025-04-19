@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Title | David Gonzalez</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css"> <!-- Changed path from "style.css" to "../style.css" -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Project page specific styles */
         body {
-            background-color: #000000;
+            background: #000000 !important; /* Ensure static black background */
+            animation: none !important; /* Remove gradient animation */
         }
         
         body::before {
@@ -226,7 +227,7 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="../index.html">HOME</a></li>
                     </ul>
                 </nav>
             </div>
@@ -242,7 +243,7 @@
             </div>
             
             <!-- Main project image -->
-            <div class="project-image-main" style="background-image: url('Assets/sample.png'); background-size: cover; background-position: center; height: 400px; margin-bottom: 40px; border: 2px solid #333;"></div>
+            <div class="project-image-main" style="background-image: url('../Assets/sample.png'); background-size: cover; background-position: center; height: 400px; margin-bottom: 40px; border: 2px solid #333;"></div>
             
             <div class="project-details">
                 <div class="project-description">
@@ -306,16 +307,16 @@
                 <h3>Gallery</h3>
                 <div class="project-gallery">
                     <div class="gallery-item">
-                        <img src="Assets/sample.png" alt="Project image 1">
+                        <img src="../Assets/sample.png" alt="Project image 1">
                     </div>
                     <div class="gallery-item">
-                        <img src="Assets/sample.png" alt="Project image 2">
+                        <img src="../Assets/sample.png" alt="Project image 2">
                     </div>
                     <div class="gallery-item">
-                        <img src="Assets/sample.png" alt="Project image 3">
+                        <img src="../Assets/sample.png" alt="Project image 3">
                     </div>
                     <div class="gallery-item">
-                        <img src="Assets/sample.png" alt="Project image 4">
+                        <img src="../Assets/sample.png" alt="Project image 4">
                     </div>
                 </div>
             </div>
@@ -341,42 +342,7 @@
                 </div>
             </div>
         </section>
-
-        <footer>
-            <div class="footer-content">
-                <div class="footer-section contact-info">
-                    <h3>Contact</h3>
-                    <p><i class="fas fa-envelope"></i> david.gonzalez@example.com</p>
-                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Hamburg, Germany</p>
-                </div>
-                
-                <div class="footer-section social-links">
-                    <h3>Connect</h3>
-                    <div class="social-icons">
-                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-section quick-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="work.html">WORK</a></li>
-                        <li><a href="lab.html">LAB</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2023 David Gonzalez. All rights reserved.</p>
-            </div>
-        </footer>
     </main>
+    <script src="../footer.js"></script>
 </body>
 </html>
