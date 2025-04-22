@@ -101,7 +101,7 @@ nav ul li a {
 }
 
 .browser-controls {
-    background-color: #FF0000;
+    background-color: #2D2D2D;
     padding: 5px 10px;
     display: flex;
     justify-content: flex-start;
@@ -113,12 +113,25 @@ nav ul li a {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #000;
-    margin-right: 5px;
+    margin-right: 6px;
     text-align: center;
     line-height: 10px;
     font-size: 10px;
-    color: #FF0000;
+}
+
+.browser-button:nth-child(1) {
+    background-color: #FF5F56; /* Red close button */
+    border: 0.5px solid #E0443E;
+}
+
+.browser-button:nth-child(2) {
+    background-color: #FFBD2E; /* Yellow minimize button */
+    border: 0.5px solid #DEA123;
+}
+
+.browser-button:nth-child(3) {
+    background-color: #27C93F; /* Green maximize button */
+    border: 0.5px solid #1AAB29;
 }
 
 .browser-content {
