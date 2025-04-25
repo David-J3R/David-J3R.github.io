@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title | David Gonzalez</title>
+    <link rel="stylesheet" href="/style.css"> <!-- Changed path from "style.css" to "../style.css" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Project page specific styles */
+        body {
+            background: #000000 !important; /* Ensure static black background */
+            animation: none !important; /* Remove gradient animation */
+        }
+        
+        body::before {
+            display: none; /* Remove the gradient background */
+        }
+        
+        .project-content {
+            padding: 0 20px 40px;
+        }
+        
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .project-header h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .project-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #8B0000;
+            transition: width 0.5s ease, left 0.5s ease;
+        }
+        
+        .project-header:hover h2::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        .project-category {
+            color: #8B0000;
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .project-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #333;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            aspect-ratio: 16/9;
+            background-color: #111;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);
+            border-color: #8B0000;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .project-info-box {
+            background-color: #111;
+            padding: 25px;
+            border-left: 3px solid #8B0000;
+            margin-bottom: 30px;
+        }
+        
+        .project-info-box h3 {
+            margin-top: 0;
+            color: #fff;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .tech-tag {
+            background-color: #222;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #444;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .tech-tag:hover {
+            background-color: #8B0000;
+            transform: translateY(-3px);
+        }
+        
+        .project-section {
+            margin-top: 60px;
+        }
+        
+        .project-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #fff;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .project-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: #8B0000;
+            transition: width 0.3s ease;
+        }
+        
+        .project-section:hover h3::after {
+            width: 120px;
+        }
+        
+        .results-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .results-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .results-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .results-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #8B0000;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .project-link-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8B0000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .project-link-btn:hover {
+            background-color: #a50000;
+            transform: translateY(-3px);
+        }
+        
+        .project-link-btn i {
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .project-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <div class="header-content">
+                <div class="name-title">
+                    <h1>DAVID<br>GONZALEZ</h1>
+                    <p class="subtitle">AI AND QUANTITATIVE DATA SCIENTIST</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">HOME</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="divider"></div>
+
+        <section class="project-content">
+            <div class="project-header">
+                <h2>ROBOTICS EDUCATION PROGRAM</h2>   
+                <p class="project-category">Educational Technology</p>
+                <div class="mini-divider"></div>
+            </div>
+            
+            <!-- Main project image -->
+            <div class="project-image-main" style="background-image: url('/Assets/sandbox/rep_001.webp'); background-size: cover; background-position: center; height: 400px; margin-bottom: 40px; border: 2px solid #333;"></div>
+            
+            <div class="project-details">
+                <div class="project-description">
+                    <div class="project-info-box">
+                        <h3>Project Overview</h3>
+                        <p>
+                            A comprehensive robotics education program designed for primary and middle school students, 
+                            focusing on fundamental programming concepts, logical thinking, and hands-on robotics experience using Abilix robots and LEGO Mindstorms platforms.
+                        </p>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h3>Challenge</h3>
+                        <p>
+                            Introducing complex technical concepts like programming, logic flow, and sensor integration to young learners with varying levels of technological exposure and learning styles, 
+                            while maintaining engagement and promoting genuine understanding rather than rote memorization.
+                        </p>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h3>Approach</h3>
+                        <p>
+                            Developed an age-appropriate curriculum that progressed from visual flowcharts to basic programming concepts. 
+                            Created hands-on exercises where students could immediately see the results of their programming through robot actions. 
+                            Implemented collaborative problem-solving activities that encouraged peer learning and reinforced logical thinking skills. 
+                            Used both Abilix robots and LEGO Mindstorms to provide exposure to different robotics platforms and programming environments.
+                        </p>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h3>Results & Impact</h3>
+                        <ul class="results-list">
+                            <li>Successfully introduced over <b>1,000</b> students to fundamental programming and robotics concepts</li>
+                            <li>Created <b>22</b> of reusable lesson plans and activities for future robotics education</li>
+                            <li>Students reported increased interest in STEM subjects after completing the program</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-sidebar">
+                    <div class="project-info-box">
+                        <h3>Project Details</h3>
+                        <p><strong>Client:</strong> University Tecnológico de Monterrey</p>
+                        <p><strong>Timeline:</strong> Jan 2022 - Jul 2022</p>
+                        <p><strong>Role:</strong> Instructor</p>
+                        <p><strong>Team Size:</strong> +30 members</p>
+                    </div>
+                    
+                    <div class="project-info-box">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Abilix</span>
+                            <span class="tech-tag">Lego Mindstorm</span>
+                            <span class="tech-tag">Scratch</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links">
+                        <!-- <a href="#" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
+                        <!-- <a href="#" class="project-link-btn"><i class="fab fa-github"></i> View Code</a> -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-section">
+                <h3>Gallery</h3>
+                <div class="project-gallery">
+                    <div class="gallery-item">
+                        <img src="/Assets/sandbox/rep_001.webp" alt="Project image 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/Assets/sandbox/rep_002.webp" alt="Project image 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/Assets/sandbox/rep_003.webp" alt="Project image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/Assets/sandbox/rep_004.webp" alt="Project image 4">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-section">
+                <h3>Key Features</h3>
+                <div class="project-info-box">
+                    <li>Age-appropriate curriculum design</li>
+                    <li>Integration of competitive challenges to boost engagement</li>
+                    <li>Hands-on, project-based learning approach</li>
+                    <li>Cross-disciplinary connections to science, math, and engineering concepts</li>
+                </div>
+            </div>
+            
+            <div class="project-section">
+                <h3>Lessons Learned</h3>
+                <div class="project-info-box">
+                    <p>
+                        Through my time as a robotics instructor, I discovered the profound impact that teaching style has on technical concept acquisition. 
+                        What might seem intuitive to experienced programmers often requires multiple approaches for young learners. I found that starting with physical demonstrations before moving to flowcharts, 
+                        and only then to actual programming, created stronger mental models for students. 
+                        The experience reinforced my belief that technology education isn't just about transferring knowledge but about cultivating curiosity. 
+                    </p>
+                </div>
+            </div>
+            
+            <!-- <div class="project-section">
+                <h3>Future Improvements</h3>
+                <div class="project-info-box">
+                    <li>Expand the sign vocabulary recognition capability</li>
+                    <li>Develop a more compact and discreet design</li>
+                    <li>Wireless connectivity</li>
+                </div>
+            </div> -->
+        </section>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section contact-info">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> david.glezh@outlook.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hamburg, Germany</p>
+                </div>
+                
+                <div class="footer-section social-links">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/david-gonzalez-huerta-385b6629a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/David-J3R" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/david.gl3z/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@Dirick_j3r" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/index.html">HOME</a></li>
+                        <li><a href="/work.html">WORK</a></li>
+                        <li><a href="/lab.html">SANDBOX</a></li>
+                        <li><a href="/certificates.html">CERTIFICATES</a></li>
+                        <li><a href="/contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 David Gonzalez. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
