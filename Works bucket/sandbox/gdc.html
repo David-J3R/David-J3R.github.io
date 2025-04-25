@@ -76,8 +76,8 @@
             overflow: hidden;
             border: 2px solid #333;
             transition: transform 0.3s ease, border-color 0.3s ease;
-            aspect-ratio: 16/9;
-            background-color: #111;
+            height: 250px;
+            width: 100%;
         }
         
         .gallery-item:hover {
@@ -90,8 +90,9 @@
             height: 100%;
             display: block;
             transition: transform 0.5s ease;
-            object-fit: cover;
+            object-fit: contain;
             object-position: center;
+            background-color: #111;
         }
         
         .gallery-item:hover img {
@@ -247,46 +248,44 @@
 
         <section class="project-content">
             <div class="project-header">
-                <h2>SIGN LANGUAGE TRANSLATION GLOVES</h2>
+                <h2>GRAPHIC DESIGN COLLECTION</h2>
                 <p class="project-category">Assistive Technology / IoT</p>
                 <div class="mini-divider"></div>
             </div>
             
             <!-- Main project image -->
-            <div class="project-image-main" style="background-image: url('/Assets/sandbox/SLTG_001.webp'); background-size: cover; background-position: center; height: 400px; margin-bottom: 40px; border: 2px solid #333;"></div>
+            <div class="project-image-main" style="background-image: url('/Assets/sandbox/gdc_001.webp'); background-size: cover; background-position: center; height: 400px; margin-bottom: 40px; border: 2px solid #333;"></div>
             
             <div class="project-details">
                 <div class="project-description">
                     <div class="project-info-box">
                         <h3>Project Overview</h3>
                         <p>
-                            Gloves that translates Sign Language into text in real-time. Using flex sensors and gyroscopes integrated with Arduino, these smart gloves detect and interpret hand gestures, 
-                            creating a bridge of communication for the deaf and hard-of-hearing community. Programmed in C++, the system processes sensor data to accurately recognize sign language movements and convert them into readable text.
+                            A collection of digital artwork and design projects created using Adobe Photoshop, Affinity Designer 2, Figma, and Canva showcasing skills in photo manipulation, digital painting, UI design, and logo creation.
                         </p>
                     </div>
                     
                     <div class="project-section">
                         <h3>Challenge</h3>
                         <p>
-                            Creating a real-time translation system for Sign Language that could accurately interpret diverse hand gestures
-                             while being comfortable enough for extended wear. The system needed to distinguish between similar gestures and account for variations in how individuals sign.
+                            Executing diverse visual concepts while maintaining consistent quality across different styles and project requirements. Each piece presented unique technical and creative challenges requiring adaptive problem-solving.
                         </p>
                     </div>
                     
-                    <div class="project-section">
+                    <!-- <div class="project-section">
                         <h3>Approach</h3>
                         <p>
                             Integrated multiple flex sensors along finger joints with a gyroscope to capture hand orientation.
                              Developed a C++ algorithm to process the sensor data, identify gesture patterns, and match them against a database of Sign Language gestures. Focused on optimizing the Arduino processing for minimum latency in translation.
                         </p>
-                    </div>
+                    </div> -->
                     
                     <div class="project-section">
                         <h3>Results & Impact</h3>
                         <ul class="results-list">
-                            <li>Created a functional prototype that successfully translates basic Sign Language in real-time</li>
-                            <li>Achieved <b>89%</b> accuracy in recognizing common signs and phrases</li>
-                            <li>Reduced communication barriers for deaf individuals in everyday interactions</li>
+                            <li>Created a visually dynamic photo featuring over <b>30</b> subjects, generating strong emotional connection with viewers</li>
+                            <li>Established a distinctive aesthetic style</li>
+                            <li>Successfully captured the energy and personality through innovative visual storytelling</li>
                         </ul>
                     </div>
                 </div>
@@ -294,19 +293,21 @@
                 <div class="project-sidebar">
                     <div class="project-info-box">
                         <h3>Project Details</h3>
-                        <p><strong>Client:</strong> University Tecnológico de Monterrey [School project]</p>
-                        <p><strong>Timeline:</strong> March 2022 - June 2022</p>
-                        <p><strong>Role:</strong> Lead Developer</p>
-                        <p><strong>Team Size:</strong> 4 members</p>
+                        <p><strong>Client:</strong> Various</p>
+                        <p><strong>Timeline:</strong> Ongoing development of skills from 2018</p>
                     </div>
                     
                     <div class="project-info-box">
                         <h3>Technologies Used</h3>
                         <div class="tech-stack">
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">Arduino Microcontroller</span>
-                            <span class="tech-tag">Flex sensors</span>
-                            <span class="tech-tag">Gyroscope</span>
+                            <span class="tech-tag">Adobe Creative Suite</span>
+                            <span class="tech-tag">Photoshop</span>
+                            <span class="tech-tag">Lightroom</span>
+                            <span class="tech-tag">Davinci Resolve</span>
+                            <span class="tech-tag">Affinity Designer 2</span>
+                            <span class="tech-tag">Canva</span>
+                            <span class="tech-tag">Premiere Pro</span>
+                            <span class="tech-tag">Figma</span>
                         </div>
                     </div>
                     
@@ -321,16 +322,16 @@
                 <h3>Gallery</h3>
                 <div class="project-gallery">
                     <div class="gallery-item">
-                        <img src="/Assets/sandbox/SLTG_001.webp" alt="Project image 1">
+                        <img src="/Assets/sandbox/gdc_002.webp" alt="Project image 1">
                     </div>
                     <div class="gallery-item">
-                        <img src="/Assets/sandbox/SLTG_003.webp" alt="Project image 2">
+                        <img src="/Assets/sandbox/gdc_003.webp" alt="Project image 2">
                     </div>
                     <div class="gallery-item">
-                        <img src="/Assets/sandbox/SLTG_004.webp" alt="Project image 3">
+                        <img src="/Assets/sandbox/gdc_004.webp" alt="Project image 3">
                     </div>
                     <div class="gallery-item">
-                        <img src="/Assets/sandbox/SLTG_005.webp" alt="Project image 4">
+                        <img src="/Assets/sandbox/gdc_005.webp" alt="Project image 4">
                     </div>
                 </div>
             </div>
@@ -343,7 +344,7 @@
                 </div>
             </div> -->
             
-            <div class="project-section">
+            <!-- <div class="project-section">
                 <h3>Lessons Learned</h3>
                 <div class="project-info-box">
                     <p>
@@ -353,14 +354,14 @@
                         I learned that assistive technology development requires deep collaboration with the communities it serves to ensure solutions address actual needs rather than presumed ones.
                     </p>
                 </div>
-            </div>
+            </div> -->
             
             <div class="project-section">
                 <h3>Future Improvements</h3>
                 <div class="project-info-box">
-                    <li>Expand the sign vocabulary recognition capability</li>
-                    <li>Develop a more compact and discreet design</li>
-                    <li>Wireless connectivity</li>
+                    <p>
+                        For future works, I plan to explore more sophisticated compositional techniques to create clearer visual hierarchies while maintaining the dynamic energy.
+                    </p>
                 </div>
             </div>
         </section>
