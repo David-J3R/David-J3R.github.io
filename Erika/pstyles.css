@@ -1,0 +1,122 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fallback font */
+    font-family: "Sour Gummy", sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background: linear-gradient(135deg, rgb(252, 228, 236), #f8bbd0); /* Soft pink gradient */
+    color: #333;
+}
+
+/* Initial Screen Styles */
+#initial-screen {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Needed for z-index if images overlap */
+    z-index: 10;
+    opacity: 0; /* Start hidden for fade-in */
+    animation: fadeIn 2s ease-in-out forwards; /* Fade-in animation */
+}
+
+.dedication-container {
+    transition: opacity 0.3s ease-out; /* Smooth transition for opacity */
+    opacity: 1;
+    padding: 20px;
+}
+
+.dedication-text {
+    font-size: 2.5em; /* Adjust size as needed */
+    font-family: "Sour Gummy", sans-serif;
+    color: #5e35b1; /* Deep romantic color */
+    line-height: 1.4;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Image Fall Container */
+#image-fall-container {
+    position: fixed; /* Fixed position to stay behind content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Hide images outside the container */
+    z-index: 1; /* Behind the initial text but above background */
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* Individual Falling Image Styles */
+.falling-image {
+    position: absolute;
+    top: -150px; /* Start above the screen */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    animation: fall linear infinite; /* Use the fall animation */
+    will-change: transform; /* Optimize animation performance */
+}
+
+/* Style overrides for the drawing image */
+.falling-drawing {
+    box-shadow: none; /* Remove shadow */
+    border-radius: 0; /* Remove rounded corners */
+}
+
+/* Fall Animation Keyframes */
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(calc(100vh + 150px)) rotate(15deg); /* Fall below the screen */
+    }
+}
+
+/* Question Section Styles */
+#question-section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Needed for z-index */
+    z-index: 5; /* Above images, below initial screen if overlapping */
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in transition */
+}
+
+
+.question-text {
+    font-size: 3.5em; /* Large, striking font size */
+    font-weight: 800;
+    color: #d81b60; /* Strong romantic color */
+    padding: 20px;
+    font-family: "Sour Gummy", sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dedication-text {
+        font-size: 2em;
+    }
+
+    .question-text {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .dedication-text {
+        font-size: 1.5em;
+    }
+
+    .question-text {
+        font-size: 2em;
+    }
+}
